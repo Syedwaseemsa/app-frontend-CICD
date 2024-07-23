@@ -23,7 +23,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "cross-env NODE_OPTIONS=--openssl-legacy-provider react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -49,15 +49,5 @@
   "main": "index.js",
   "directories": {
     "test": "test"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/marcrine-geek/BookAppFrontend.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/marcrine-geek/BookAppFrontend/issues"
-  },
-  "homepage": "https://github.com/marcrine-geek/BookAppFrontend#readme"
+  }
 }
