@@ -2,16 +2,24 @@ version: 0.2
 
 phases:
   install:
+    runtime-versions:
+      nodejs: 18
+   
     commands:
-      - echo Installing NPM dependencies...
-      - npm install
-      - npm install --save-dev cross-env
+        # install npm
+        - npm install
+       
   build:
     commands:
-      - echo Build started on `date`
-      - npm run build
+        # run build script
+        - npm run build
+     
 artifacts:
+  # include all files required to run application
+  # notably excluded is node_modules, as this will cause overwrite error on deploy
   files:
-    - '**/*'
-  base-directory: build
-
+    - public/**/*
+    - src/**/*
+    - package.json
+    - appspec.yml
+    - scripts/**/*
